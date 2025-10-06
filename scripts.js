@@ -82,7 +82,7 @@ const questions = [
         ]
     },
     {
-        question: "Quem é o atual Campeão da superliga feminina (2023/2024)?",
+        question: "Quem é o atual Campeão da superliga feminina (2024/2025)?",
         answers: [
             { text: "Minas", correct: false },
             { text: "Praia Clube", correct: false },
