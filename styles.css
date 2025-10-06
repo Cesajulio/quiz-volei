@@ -1,0 +1,167 @@
+
+/* Estilos globais e de corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Um azul claro e relaxante */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Contêiner principal do quiz */
+.quiz-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.2em;
+    color: #00796b;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #004d40;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* Seção de botões de times */
+#team-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas maiores */
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Estilo para todos os botões (times, respostas, próximos) */
+.btn {
+    font-size: 1.1em;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    font-weight: 500;
+}
+
+/* Estilo para os botões de seleção de time */
+.team-btn {
+    background-color: #f1f8e9;
+    color: #004d40;
+    border: 1px solid #c8e6c9;
+}
+
+.team-btn:hover {
+    background-color: #e8f5e9;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os botões de resposta */
+#answer-buttons .btn {
+    background-color: #b3e5fc;
+    color: #01579b;
+    border: 1px solid #81d4fa;
+}
+
+#answer-buttons .btn:hover:not([disabled]) {
+    background-color: #81d4fa;
+}
+
+/* Estilo do botão "Próxima" e "Reiniciar" */
+#next-button, #restart-button {
+    background-color: #00796b;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    margin-top: 20px;
+}
+
+#next-button:hover:not([disabled]), #restart-button:hover {
+    background-color: #004d40;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de feedback (correto e incorreto) */
+#answer-buttons .btn.correct {
+    background-color: #43a047; /* Verde escuro */
+    color: white;
+    border-color: #2e7d32;
+    transform: scale(1.05);
+}
+
+#answer-buttons .btn.incorrect {
+    background-color: #e53935; /* Vermelho */
+    color: white;
+    border-color: #c62828;
+    transform: scale(1.05);
+}
+
+/* Estilo para botões desabilitados */
+.btn[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Classes utilitárias */
+.hide {
+    display: none !important;
+}
+
+/* Estilos para a área de resultado */
+#Result-area {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+#score-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #004d40;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    #team-buttons {
+        grid-template-columns: 1fr; /* Apenas uma coluna em telas pequenas */
+    }
+
+    .btn {
+        font-size: 1em;
+        padding: 12px;
+    }
+}

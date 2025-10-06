@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz_volei</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container" id="team-selection-container">
+        <h1>Quiz sobre vôlei</h1>
+        <h2>Qual torcida da superliga feminina possui o maior conhecimento sobre vôlei?</h2>
+        <div id="team-buttons">
+            <h3>Marque qual é seu time do coração para começarmos</h3><br>
+            <button class="btn team-btn" data-team="Minas">Minas</button>
+            <button class="btn team-btn" data-team="Osasco">Osasco</button>
+            <button class="btn team-btn" data-team="Praia Clube">Praia Clube</button>
+            <button class="btn team-btn" data-team="Sesc-Flamengo">Sesc Flamengo</button>
+            <button class="btn team-btn" data-team="Sesi Bauru">Sesi Bauru</button>
+            <button class="btn team-btn" data-team="Fluminense">Fluminense</button>
+            <button class="btn team-btn" data-team="Maringá">Maringá</button>
+            <button class="btn team-btn" data-team="Brasília">Brasília</button>
+            <button class="btn team-btn" data-team="Mackenzie">Mackenzie</button>
+            <button class="btn team-btn" data-team="Tijuca">Tijuca</button>
+            <button class="btn team-btn" data-team="Barueri">Barueri</button>
+            <button class="btn team-btn" data-team="Sorocaba">Sorocaba</button>
+        </div>
+    </div>
+    
+    ...
+    <div class="quiz-container hide" id="quiz-area-container">
+        <div id="question-area">
+            <h2 id="question"></h2>
+            <div id="answer-buttons" class="btn-grid"></div>
+        </div>
+        <button id="next-button" class="hide">Próxima</button>
+    </div>
+
+    <div class="result-area hide" id="Result-area">
+        <p id="score-text">Sua pontuação final é: 0 de 10</p>
+        <button id="restart-button">Reiniciar Quiz</button>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
+    
